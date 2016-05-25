@@ -1,0 +1,3 @@
+D:/Desktop/TG/TG/CMakeFiles/externalplugin.dir
+D:/Desktop/TG/TG/CMakeFiles/ALL_BUILD.dir
+D:/Desktop/TG/TG/CMakeFiles/ZERO_CHECK.dir

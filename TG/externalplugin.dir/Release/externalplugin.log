@@ -1,0 +1,26 @@
+﻿Build started 29/01/2016 08:45:37.
+     1>Project "D:\Desktop\TG\TG\externalplugin.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         setlocal
+         cd D:\Desktop\TG\TG
+         if %errorlevel% neq 0 goto :cmEnd
+         D:
+         if %errorlevel% neq 0 goto :cmEnd
+         "C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen D:/Desktop/TG/TG/CMakeFiles/externalplugin_automoc.dir/ Release
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /ID:\Desktop\TG\TG /ID:\Desktop\TG\ExternalPlugin\build\cmake /I"D:\terralib5-3rdparty-msvc-2013-win64\include" /I\src /ID:\Projeto\terralib5\build\cmake\..\..\src /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtWidgets /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtGui /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtCore /I"C:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\mkspecs\win32-msvc2013" /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtPrintSupport /nologo /W3 /WX- /O2 /Ob2 /D WIN32 /D _WINDOWS /D NDEBUG /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D EXTERNALPLUGINDLL /D QT_NO_DEBUG /D QT_PRINTSUPPORT_LIB /D "CMAKE_INTDIR=\"Release\"" /D externalplugin_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"externalplugin.dir\Release\\" /Fd"externalplugin.dir\Release\vc120.pdb" /Gd /TP /errorReport:prompt D:\Desktop\TG\ExternalPlugin\src\Utils.cpp
+         Utils.cpp
+     1>d:\projeto\terralib5\src\terralib\common\../BuildConfig.h(46): fatal error C1083: Cannot open include file: 'terralib_buildconfig.h': No such file or directory
+     1>Done Building Project "D:\Desktop\TG\TG\externalplugin.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.19

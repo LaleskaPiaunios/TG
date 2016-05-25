@@ -1,0 +1,63 @@
+﻿Build started 24/05/2016 12:37:42.
+     1>Project "D:\Desktop\TG\TG\externalplugin.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         setlocal
+         cd D:\Desktop\TG\TG
+         if %errorlevel% neq 0 goto :cmEnd
+         D:
+         if %errorlevel% neq 0 goto :cmEnd
+         "C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen D:/Desktop/TG/TG/CMakeFiles/externalplugin_automoc.dir/ Debug
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /ID:\Desktop\TG\TG /ID:\Desktop\TG\ExternalPlugin\build\cmake /I"D:\terralib5-3rdparty-msvc-2013-win64\include" /I\src /ID:\Projeto\terralib5\build\cmake\..\..\src /ID:\Workspace\terraview5semlayout /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtWidgets /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtGui /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtCore /I"C:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\mkspecs\win32-msvc2013" /IC:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\include\QtPrintSupport /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D BOOST_ALL_NO_LIB /D BOOST_FILESYSTEM_VERSION=3 /D BOOST_UBLAS_TYPE_CHECK=0 /D EXTERNALPLUGINDLL /D QT_PRINTSUPPORT_LIB /D "CMAKE_INTDIR=\"Debug\"" /D externalplugin_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"externalplugin.dir\Debug\\" /Fd"externalplugin.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt D:\Desktop\TG\ExternalPlugin\src\qt\CloudDetection.cpp D:\Desktop\TG\ExternalPlugin\src\qt\RasterFile.cpp
+         CloudDetection.cpp
+         RasterFile.cpp
+     1>D:\Desktop\TG\ExternalPlugin\src\qt\RasterFile.cpp(377): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>D:\Projeto\terralib5\src\../../terralib5/src/terralib/raster/PositionIterator.h(656): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+                 D:\Projeto\terralib5\src\../../terralib5/src/terralib/raster/PositionIterator.h(593) : while compiling class template member function 'void te::rst::PolygonIterator<double>::setNextLine(bool)'
+                 D:\Projeto\terralib5\src\../../terralib5/src/terralib/raster/PositionIterator.h(737) : see reference to function template instantiation 'void te::rst::PolygonIterator<double>::setNextLine(bool)' being compiled
+                 D:\Projeto\terralib5\src\../../terralib5/src/terralib/raster/PositionIterator.h(506) : while compiling class template member function 'te::rst::PolygonIterator<double>::~PolygonIterator(void)'
+                 D:\Desktop\TG\ExternalPlugin\src\qt\RasterFile.cpp(225) : see reference to function template instantiation 'te::rst::PolygonIterator<double>::~PolygonIterator(void)' being compiled
+                 D:\Desktop\TG\ExternalPlugin\src\qt\RasterFile.cpp(225) : see reference to class template instantiation 'te::rst::PolygonIterator<double>' being compiled
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Desktop\TG\TG\Debug\externalplugind.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_qt_apfd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_qt_widgetsd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_vp_cored.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_plugind.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_std.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_maptoolsd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_symbologyd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_colord.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_annotationtextd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_filterd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_gmld.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_xlinkd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_stmemoryd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_statistics_qtd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_rpd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_classificationd.lib "D:\terralib5-3rdparty-msvc-2013-win64\lib\qwtd.lib" "D:\terralib5-3rdparty-msvc-2013-win64\lib\qt_property_browserd.lib" C:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\lib\Qt5PrintSupportd.lib C:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\lib\Qt5Widgetsd.lib C:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\lib\Qt5Guid.lib C:\Qt\Qt5.4.1\5.4\msvc2013_64_opengl\lib\Qt5Cored.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_memoryd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_statistics_cored.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_dataaccessd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_rasterd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_geometryd.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_datatyped.lib "D:\terralib5-3rdparty-msvc-2013-win64\lib\boost_date_time-mt-gd.lib" "D:\terralib5-3rdparty-msvc-2013-win64\lib\geosd.lib" "D:\terralib5-3rdparty-msvc-2013-win64\lib\boost_thread-mt-gd.lib" D:\Workspace\terraview5semlayout\Debug\terralib_mod_srsd.lib "D:\terralib5-3rdparty-msvc-2013-win64\lib\proj_i_d.lib" D:\Workspace\terraview5semlayout\Debug\terralib_mod_xmld.lib D:\Workspace\terraview5semlayout\Debug\terralib_mod_commond.lib "D:\terralib5-3rdparty-msvc-2013-win64\lib\boost_filesystem-mt-gd.lib" "D:\terralib5-3rdparty-msvc-2013-win64\lib\boost_system-mt-gd.lib" "D:\terralib5-3rdparty-msvc-2013-win64\lib\log4cxxd.lib" "D:\terralib5-3rdparty-msvc-2013-win64\lib\intl_d.lib" "D:\terralib5-3rdparty-msvc-2013-win64\lib\iconv_d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Desktop/TG/TG/Debug/externalplugind.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Desktop/TG/TG/Debug/externalplugind.lib" /MACHINE:X64  /machine:x64 /debug /DLL externalplugin.dir\Debug\ExternalPlugin.obj
+         externalplugin.dir\Debug\Plugin.obj
+         externalplugin.dir\Debug\Utils.obj
+         externalplugin.dir\Debug\CloudDetection.obj
+         externalplugin.dir\Debug\MyDialog.obj
+         externalplugin.dir\Debug\RasterFile.obj
+         externalplugin.dir\Debug\externalplugin_automoc.obj
+         externalplugin.vcxproj -> D:\Desktop\TG\TG\Debug\externalplugind.dll
+       PostBuildEvent:
+         setlocal
+         "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_directory D:/Desktop/TG/TG/Debug D:/Workspace/terraview5semlayout/debug
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         setlocal
+         "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_directory D:/Desktop/TG/TG/Release D:/Workspace/terraview5semlayout/release
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+     1>Done Building Project "D:\Desktop\TG\TG\externalplugin.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.85
